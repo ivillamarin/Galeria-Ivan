@@ -1,0 +1,664 @@
+/*---- RESET------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*----- GOOGLE FONT ------ */
+.cal-sans-regular {
+    font-family: "Cal Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*---- HEADER ------ */
+header {
+    background-color: rgba(192, 109, 31, 0.548);
+    width: 100%;
+    height: 150px;
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px, black;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: start;
+    flex-direction: row;
+    justify-content: end;
+
+}
+
+header nav ul li {
+    font-size: 30px;
+    margin-right: 20px;
+    font-family: "Cal Sans", sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li:hover {
+    transform: scale(1.1);
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+
+
+
+/*----- RELOJ ------ */
+.reloj-digital {
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Cal Sans", sans-serif;
+    color: white;
+    width: 290px;
+}
+
+#fecha {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#hora {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Animación a los dos puntos */
+#hora .parpadeo {
+    animation: parpadeo 3s infinite;
+}
+
+@keyframes parpadeo {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/*-- keyframes ------ */
+@keyframes slidein {
+    from {
+        margin-bottom: 120%;
+    }
+
+    to {
+        margin-top: 3%;
+
+
+    }
+}
+
+
+/*-----  mensaje -------*/
+#mensaje-bienvenida {
+    font-size: x-large;
+    color: white;
+    margin-top: 5px;
+    text-align: right;
+    padding-right: 20px;
+    font-family: "Cal Sans", sans-serif;
+    opacity: 0;
+    animation: aparecer 1.5s ease forwards;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/*---- BODY ------ */
+.hero {
+    background-image: url("../multimedia/FullSizeRender.JPEG");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.main {
+    background-image: url("../multimedia/FullSizeRender.JPEG");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*----- CONTAINER 1 ------ */
+.container1 {
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.container1 h2 {
+
+    font-size: 180px;
+    font-family: "Cal Sans", sans-serif;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.349);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.container1 h2:hover {
+    transform: scale(1.1);
+    color: white;
+
+}
+
+.container1 h5 {
+    font-size: 20px;
+    font-family: "Cal Sans", sans-serif;
+    margin-bottom: 20px;
+    animation-name: slidein;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+
+
+/*----- FLECHA ------ */
+.flecha-abajo {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5rem;
+    color: #555;
+    animation: rebote 1.5s infinite;
+    transition: opacity 0.5s ease;
+}
+
+
+@keyframes rebote {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/*----- CONTAINER 2 ------ */
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 150px;
+}
+
+
+.container2 ul {
+    display: flex;
+    list-style: none;
+    align-items: start;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container2 ul li {
+    font-size: 60px;
+    margin-right: 20px;
+    font-family: "Cal Sans", sans-serif;
+    margin: 30px;
+
+}
+
+.container2 ul li :hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.container2 ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+
+
+/*----- DESCRIPCION ------ */
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.descripcion {
+    font-size: x-large;
+    line-height: 1.6;
+    text-align: center;
+    color: white;
+    font-family: "Cal Sans", sans-serif;
+}
+
+
+
+
+/*----- SECCION FOTOS ------ */
+
+.seccion-silencio {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    font-family: "Cal Sans", sans-serif;
+    min-height: 100vh;
+}
+
+.seccion-pausa {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    min-height: 100vh;
+    font-family: "Cal Sans", sans-serif;
+}
+
+.seccion-ruido {
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    min-height: 100vh;
+    font-family: "Cal Sans", sans-serif;
+}
+
+.seccion-silencio h2 {
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.seccion-pausa h2 {
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.seccion-ruido h2 {
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 4 columnas iguales */
+    gap: 80px;
+    /* espacio entre fotos */
+    padding: 20px;
+}
+
+.foto {
+    width: 300px;
+    height: 350px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.contFoto {
+    border-radius: 8px;
+}
+
+.contFoto:hover {
+    transform: scale(1.4);
+    transition: transform 0.3s ease;
+}
+
+/*----- CIERRE PAGINA  ------ */
+.cierre-pagina {
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    font-size: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.cierre-pagina p{
+    font-family: "Cal Sans", sans-serif;
+}
+
+
+.boton-volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #eec752;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: "Cal Sans", sans-serif;
+}
+
+.boton-volver:hover {
+    background-color: #df8313;
+}
+
+
+/*----- LOGIN ------ */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+    background-color: #17171710;
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    height: 400px;
+    width: 400px;
+}
+
+.form:hover {
+    transform: scale(1.05);
+}
+
+#heading {
+    text-align: center;
+    margin: 2em;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    font-family: "Cal Sans", sans-serif;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #fffdfd38;
+
+}
+
+.input-icon {
+    height: 1.3em;
+    width: 1.3em;
+    fill: white;
+}
+
+.input-field {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+}
+
+.form .btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2.5em;
+}
+
+.button1 {
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #ffffff91;
+    color: white;
+}
+
+.button1:hover {
+    background-color: rgb(62, 216, 56);
+    color: white;
+}
+
+.button2 {
+    padding: 0.5em;
+    padding-left: 2.3em;
+    padding-right: 2.3em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-color: #ffffff91;
+    color: white;
+}
+
+.button2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.button2:hover {
+    background-color: black;
+    color: white;
+}
+
+/*----- sobre mi ------ */
+
+.card2 {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card2 .card__image-banner {
+    width: 499px;
+    height: 399px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.card2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #3d3c3c6e;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card2:hover .card__content {
+    transform: rotateX(0deg);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Cal Sans", sans-serif;
+}
+
+.card:hover .card__image-banner {
+    scale: 0;
+}
+
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: medium;
+    color: #ffffff;
+    line-height: 1.4;
+    font-family: "Cal Sans", sans-serif;
+}
+
+
+
+
+
+/*----- FOOTER ------ */
+footer {
+    background-color: black;
+}
+
+.card {
+    display: flex;
+    height: 70px;
+    width: 270px;
+}
+
+.card svg {
+    position: absolute;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.card .social-link1,
+.card .social-link2,
+.card .social-link3,
+.card .social-link4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+    border-radius: 50px;
+}
+
+.card svg {
+    transform: scale(1);
+}
+
+.card .social-link1:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    animation: bounce_613 0.4s linear;
+}
+
+.card .social-link2:hover {
+    background-color: #00ccff;
+    animation: bounce_613 0.4s linear;
+}
+
+.card .social-link3:hover {
+    background-color: #5865f2;
+    animation: bounce_613 0.4s linear;
+}
+
+.card .social-link4:hover {
+    background-color: #12a50b;
+    animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
